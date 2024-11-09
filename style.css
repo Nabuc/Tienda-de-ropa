@@ -159,7 +159,7 @@ left: -15px;
     background-color: #f0f0f0;
     padding: 20px;
     border-radius: 10px;
-    margin: 0 35px;
+    margin: 0 25px;
 }
 
 .grid-item {
@@ -194,6 +194,7 @@ left: -15px;
 }
 .grid-item-descripcion h3,h4,h5{
     margin: 0;
+    padding: 4px 0;
 }
 .grid-item:hover{
     border: 5px solid #5643a3;
@@ -203,7 +204,7 @@ left: -15px;
 /*menu de prendas*/
 .prendas__container{
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual ancho */
+    grid-template-columns: repeat(3, 1fr); /* 4 columnas de igual ancho */
     gap: 10px; /* Espacio entre los elementos */
     width: 97%;
     background-color: #f0f0f0;
@@ -233,6 +234,7 @@ left: -15px;
 }
 .prenda__container__items__texto h2{
   color: #333;
+  margin: 0;
 }
 .prendas__container__items img{
      width: 75px;
@@ -271,7 +273,7 @@ img {
 }
 .grid-container__slider{
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 10px;
     padding: 20px;
 }
@@ -287,6 +289,7 @@ img {
     width: 250px; 
     transition: opacity 0.5s ease; /* Suaviza el cambio de opacidad */ 
 }
+
 .grid-item-imagen-slider img {
     width: 100%; /* Asegura que la imagen ocupe el 100% del ancho del contenedor */
     height: 100%; /* O auto, si prefieres que mantenga la proporción */
@@ -298,6 +301,22 @@ img {
     padding: 10px;
     text-align: initial;
     margin: 0;
+}
+.grid-item-slider-small{
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.5s ease; /* Suaviza el cambio de opacidad */ 
+    width: 250px;
+    height: 250px;
+}
+.grid-item-slider-small img{
+    height: 150px;
+    width: 150px;
 }
 .grid-item-slider.mostrar:hover{
     border: 5px solid #5643a3;
@@ -313,10 +332,10 @@ img {
 .titulo__estilo{
   display: grid;
   justify-items: center;
-  margin: 20px 0;
   align-items: center;
 }
 .titulo__estilo h2{
+  margin-bottom: 10px ;
   background: #333;
   align-content: center;
   color: white;
@@ -337,7 +356,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 10px;
 }
 .titulo__estilo__opciones img{
   width: 35px;
@@ -355,9 +373,8 @@ img {
 }
 .grid-flechas{
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   width: 40px;
-  background-color: red;
   padding: 0 20px;
   border-radius: 10px;
   margin-top: 20px;
@@ -414,7 +431,6 @@ img {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
  /* width: 20%; */
-  background-color: red;
   padding: 20px;
   border-radius: 10px;
 } 

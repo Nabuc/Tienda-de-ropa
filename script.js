@@ -27,7 +27,7 @@ botones.forEach(boton => {
     const caja = document.getElementById(targetId);
     // eliminar clase opcity de la clase de todos los elementos de la caja
     if (caja){
-      const elementosOpacity = caja.querySelectorAll('.grid-item-slider');
+      const elementosOpacity = caja.querySelectorAll('.grid-item-slider-small');
       // Alternar visibilidad de los elementos
       elementosOpacity.forEach(elemento => {
         //verificar si tiene clase opacity para cambiarla 
