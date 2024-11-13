@@ -501,6 +501,28 @@ img {
     margin-right: 10px;
     height: 200px; 
 }
+/*Tallas zapatos*/
+.tallas-zapato {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.talla {
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+.talla:hover:not(.agotada) {
+    background-color: #5643a3;
+    color: white;
+    border-color: #5643a3;
+}
 /*Menu de tallas*/
 .tallas-container {
     background-color: #f0f0f0;
