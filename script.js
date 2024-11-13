@@ -42,3 +42,41 @@ botones.forEach(boton => {
     }
   });
 });
+//Configuracion botones de tallas
+document.querySelectorAll('.talla').forEach(button => {
+  button.addEventListener('click', function() {
+      if (!this.classList.contains('agotada')) {
+          document.querySelectorAll('.talla').forEach(btn => btn.classList.remove('seleccionada'));
+          this.classList.add('seleccionada');
+      }
+  });
+});
+//Configuracion de añadir al carro
+        const cantidad = document.getElementById('cantidad');
+        const decrementar = document.getElementById('decrementar');
+        const incrementar = document.getElementById('incrementar');
+
+        decrementar.addEventListener('click', () => {
+            if (cantidad.value > 1) {
+                cantidad.value = parseInt(cantidad.value) - 1;
+            }
+        });
+
+        incrementar.addEventListener('click', () => {
+            if (cantidad.value < 10) {
+                cantidad.value = parseInt(cantidad.value) + 1;
+            }
+        });
+
+        cantidad.addEventListener('change', () => {
+            cantidad.value = Math.max(1, Math.min(10, parseInt(cantidad.value) || 1));
+        });
+
+        document.querySelector('.comprar').addEventListener('click', () => {
+            const tallaSeleccionada = document.querySelector('.talla.seleccionada');
+            if (tallaSeleccionada) {
+                alert(`Has añadido ${cantidad.value} unidad(es) de talla ${tallaSeleccionada.textContent} al carrito.`);
+            } else {
+                alert('Por favor, selecciona una talla antes de añadir al carrito.');
+            }
+        });

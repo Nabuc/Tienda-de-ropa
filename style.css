@@ -438,3 +438,170 @@ img {
 .grid-item-slider-none{
     display: contents;
 }
+/*Configuracion de prendas*/
+.grid-container__prendas {
+    display: grid;
+    grid-template-columns: 52% 45%; 
+    gap: 20px; /* Espacio entre los elementos */
+    width: 97%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 25px;
+}
+.grid-containers__prendas-imagenes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid-containers__prendas-texto{
+    display: grid;
+    grid-template-rows: repeat(4, auto); /* Crea 4 filas para los 4 contenedores */
+    justify-items: center; /* Centra cada contenedor hijo horizontalmente */
+    align-content: start;
+}
+.prendas-imagenes-item{
+    background-color: #333;
+    height: 500px;
+    margin: 8px;
+}
+.prendas-imagenes-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.prendas-texto-iconos{
+    background-color: #333;
+    margin-top: 20px;
+    margin-right: 10px;
+    height: 50px;
+}
+.prendas-texto-descripcion{
+    background-color: #f0f0f0;
+    margin-top: 20px;
+    margin-right: 10px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.prendas-texto-descripcion h2{
+    margin: 0;
+}
+.descripcion__precio h3{
+    text-align: center;
+}
+.prendas-texto-tallas{
+    margin-top: 20px;
+    margin-right: 10px;
+    height: 200px;
+}
+.prendas-texto-botones{
+    background-color: #f0f0f0;
+    margin-top: 20px;
+    margin-right: 10px;
+    height: 200px; 
+}
+/*Menu de tallas*/
+.tallas-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+.tallas {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.talla {
+    padding: 10px 20px;
+    border: 2px solid #5643a3;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    color: #333;
+}
+.talla:hover:not(.agotada) {
+    background-color: #333;
+    color: #f0f0f0;
+    border-color: #333;
+}
+.seleccionada {
+    background-color: #5643a3;
+    color: white;
+}
+.agotada {
+    opacity: 0.5;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+.leyenda {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+}
+/*Estilos añadir al carro */
+.compra-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 20px;
+ }
+ .cantidad {
+     display: flex;
+     align-items: center;
+     padding-right: 5px;
+ }
+ .cantidad button {
+     background-color: #333;
+     color: white;
+     border: none;
+     padding: 5px 10px;
+     cursor: pointer;
+     font-size: 1.2em;
+ }
+ .cantidad input {
+     width: 40px;
+     text-align: center;
+     font-size: 1em;
+     margin: 0 10px;
+     border: 1px solid #333;
+     padding: 5px;
+ }
+ .comprar {
+     background-color: #5643a3;
+     color: white;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+ }
+ .comprar:hover {
+     background-color: #4a3a8c;
+ }
+.compra-inmediata{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.compra-button{
+     background-color: #5643a3;
+     color: white;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+}
+.compra-button:hover{
+    background-color: #4a3a8c;
+}
