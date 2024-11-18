@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body id="body">
+    <header>
+        <h1 class="tittle">Tienda de ropa</h1>
+        <div class="icon__menu">
+            <i id="btn_open"><img src="../../../img/iconos/menu.png" alt=""></i>
+        </div>
+    </header>
+    <div class="menu__side" id="menu_side">
+        <div class="name__page">
+            <img src="../../../img/buso.png" alt="">
+            <h4 class="menu__text">Ropa</h4>
+        </div>
+        <div class="options__menu">
+            <a href="">
+                <div class="option">
+                    <h4 class="menu__text">Inicio</h4>
+                </div>
+            </a>
+            <a href="../../../hombre.html" class="selected">
+                <div class="option">
+                    <h4 class="menu__text">Hombre</h4>
+                </div>
+            </a>
+            <a href="../../../mujer.html">
+                <div class="option">
+                    <h4 class="menu__text">Mujer</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="prendas__container">
+      <div class="prendas__container__item__conjunto">
+          <div class="prendas__container__items">
+            <a href="../../../hombre-superior.html">
+              <img src="../../../img/iconos/icons-t-h.png" alt="">
+            </a>
+          </div>
+          <div class="prenda__container__items__texto"><h2>Superior</h2></div>
+      </div>
+      <div class="prendas__container__item__conjunto">
+          <div class="prendas__container__items">
+            <a href="../../../hombre-inferior.html">
+              <img src="../../../img/iconos/icon-p-h.png" alt="">
+            </a>
+          </div>
+          <div class="prenda__container__items__texto"><h2>Inferior</h2></div>
+      </div>
+      <div class="prendas__container__item__conjunto">
+          <div class="prendas__container__items">
+            <a href="../../../hombre-zapatos.html">
+              <img src="../../../img/iconos/icon-zapato.png" alt="">
+            </a>
+          </div>
+          <div class="prenda__container__items__texto"><h2>Zapatos</h2></div>
+      </div>
+    </div> 
+
+    <div class="grid-container__prendas">
+    <div class="grid-containers__prendas-imagenes">
+        <div class="prendas-imagenes-item">
+            <img src="../../../img/img-hombre-superior/Camisanegra.png" alt="">
+        </div>
+        <div class="prendas-imagenes-item">
+            <img src="../../../img/img-hombre-superior/Camisanegra.png" alt="">
+        </div>
+        <div class="prendas-imagenes-item">
+            <img src="../../../img/img-hombre-superior/Camisanegra.png" alt="">
+        </div>
+        <div class="prendas-imagenes-item">
+            <img src="../../../img/img-hombre-superior/Camisanegra.png" alt="">
+        </div>
+        
+    </div>
+    <div class="grid-containers__prendas-texto">
+        <div class="prendas-texto-iconos"></div>
+        <div class="prendas-texto-descripcion">
+            <div class="descripcion__prenda">
+            <h2>Camisa negra Versage</h2>
+            </div>
+            <div class="descripcion__precio">
+                <h3>Precio: $100.000</h3>
+            </div>
+        </div>
+        <div class="prendas-texto-tallas">
+            <div class="tallas__texto"></div>
+            <div class="tallas__iconos">
+                <div class="tallas-container">
+                    <h2>Selecciona tu talla</h2>
+                    <div class="tallas">
+                        <button class="talla">XS</button>
+                        <button class="talla">S</button>
+                        <button class="talla">M</button>
+                        <button class="talla">L</button>
+                        <button class="talla">XL</button>
+                    </div>
+                    <div class="leyenda">
+                        <p>Las tallas tachadas no están disponibles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="prendas-texto-botones">
+            <div class="compra-container">
+                <div class="cantidad">
+                    <button id="decrementar" aria-label="Decrementar cantidad">-</button>
+                    <input type="number" id="cantidad" value="1" min="1" max="10" aria-label="Cantidad">
+                    <button id="incrementar" aria-label="Incrementar cantidad">+</button>
+                </div>
+                <button class="comprar">Añadir al carrito</button>
+            </div>
+            <div class="compra-inmediata">
+                <button class="compra-button">Comprar</button>
+            </div>
+        </div>
+
+    </div> 
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Mi Nombre</p>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>
+ 
