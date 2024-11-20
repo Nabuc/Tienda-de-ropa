@@ -1,4 +1,4 @@
- body {
+body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
@@ -8,7 +8,9 @@
     margin-top: 100px;
     box-sizing: border-box;
 }
-
+body a{
+    text-decoration: none;
+}
 header {
     background-color: #333;
     color: white;
@@ -637,4 +639,24 @@ h2 {
 }
 .compra-button:hover{
     background-color: #4a3a8c;
+}
+/*Estilos para tabla de CRUD*/
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #333;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+form, table {
+    margin: auto;
+    width: 50%;
 }

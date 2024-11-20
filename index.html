@@ -1,160 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda</title>
+    <title>CRUD de prendas</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="body">
-    <header>
-        <h1 class="tittle">Tienda de ropa</h1>
-        <div class="icon__menu">
-            <i id="btn_open"><img src="./img/iconos/menu.png" alt=""></i>
-        </div>
-    </header>
-    <div class="menu__side" id="menu_side">
-        <div class="name__page">
-            <img src="./img/iconos/bolsa-de-la-compra.png`" alt="">
-            <h4 class="menu__text">Ropa</h4>
-        </div>
-        <div class="options__menu">
-            <a href="">
-                    <h4 class="menu__text">Inicio</h4>
-                
-            </a>
-            <a href="" class="selected">
-                <div class="option">
-                    <h4 class="menu__text">Hombre</h4>
-                </div>
-            </a>
-            <a href="">
-                <div class="option">
-                    <h4 class="menu__text">Mujer</h4>
-                </div>
-            </a>
-        </div>
-    </div>
+<body>
+    <h1>CRUD de Administrador</h1>
 
-    <div class="prendas__container">
-      <div class="prendas__container__item__conjunto">
-        <div class="prendas__container__items"><img src="./img/iconos/icons-t-h.png" alt=""></div>
-        <div class="prenda__container__items__texto"><h2>Superior</h2></div>
-      </div>
-      <div class="prendas__container__item__conjunto">
-        <div class="prendas__container__items"><img src="./img/iconos/icon-p-h.png" alt=""></div>
-        <div class="prenda__container__items__texto"><h2>Inferior</h2></div>
-      </div>
-      <div class="prendas__container__item__conjunto">
-        <div class="prendas__container__items"><img src="./img/iconos/icon-zapato.png " alt=""></div>
-        <div class="prenda__container__items__texto"><h2>Zapatos</h2></div>
-      </div>
-      <div class="prendas__container__item__conjunto">
-        <div class="prendas__container__items"><img src="./img/iconos/icons-interior-h.png" alt=""></div>
-        <div class="prenda__container__items__texto"><h2>Interior</h2></div>
-      </div>
-    </div>
-    <div class="grid-container">
-        <div class="grid-item">
-            <div class="grid-item-imagen">
-               <img src="./img/hoddie.png" alt="prenda">
-            </div>
-            <div class="grid-item-descripcion">
-                <h3>Descripción</h3>
-                <h4>Talla</h4>
-                <h4>Precio</h4>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="grid-item-imagen">
-               <img src="./img/hoddie.png" alt="prenda">
-            </div>
-            <div class="grid-item-descripcion">
-                <h3>Descripción</h3>
-                <h4>Talla</h4>
-                <h4>Precio</h4>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="grid-item-imagen">
-                <img src="./img/hoddie.png" alt="prenda">
-            </div>
-            <div class="grid-item-descripcion">
-                <h3>Descripción</h3>
-                <h4>Talla</h4>
-                <h4>Precio</h4>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="grid-item-imagen">
-              <img src="./img/hoddie.png" alt="prenda">
-            </div>
-            <div class="grid-item-descripcion">
-                <h3>Descripción</h3>
-                <h4>Talla</h4>
-                <h4>Precio</h4>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="grid-item-imagen">
-                <img src="./img/buso.png" alt="prenda">
-            </div>
-            <div class="grid-item-descripcion">
-                <h3>Descripción</h3>
-                <h4>Talla</h4>
-                <h4>Precio</h4>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="grid-item-imagen">
-              <img src="./img/buso.png" alt="prenda">
-            </div>
-            <div class="grid-item-descripcion">
-                <h3>Descripción</h3>
-                <h4>Talla</h4>
-                <h4>Precio</h4>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="grid-item-imagen">
-                <img src="./img/buso.png" alt="prenda">          
-            </div>
-            <div class="grid-item-descripcion">
-                <h3>Descripción</h3>
-                <h4>Talla</h4>
-                <h4>Precio</h4>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="grid-item-imagen">
-                <img src="./img/buso.png" alt="prenda">
-            </div>
-            <div class="grid-item-descripcion">
-                <h3>Descripción</h3>
-                <h4>Talla</h4>
-                <h4>Precio</h4>
-            </div>
-        </div>
-    </div>
+    <form id="productoForm" enctype="multipart/form-data">
+        <input type="text" id="nombre" placeholder="Nombre de prenda" required>
+        <input type="number" id="precio" placeholder="Precio" required>
+        <input type="text" id="talla" placeholder="talla" required>
+        <input type="file" id="imagen" accept="image/*" required> <!-- Campo para imagen -->
+        <button type="submit">Agregar Producto</button>
+    </form>
+    
+    <table id="prendasTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Talla</th>
+                <th>Imagen</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se llenarán las filas dinámicamente -->
+        </tbody>
+    </table>
+    
 
-    <section id="about">
-        <h2>Sobre Mí</h2>
-        <p>Una breve descripción sobre ti.</p>
-    </section>
-    <section id="projects">
-        <h2>Proyectos</h2>
-        <p>Descripción de tus proyectos.</p>
-    </section>
-    <section id="contact">
-        <h2>Contacto</h2>
-        <p>Tu información de contacto.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Mi Nombre</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="script_connection.js"></script>
 </body>
 </html>
- 
