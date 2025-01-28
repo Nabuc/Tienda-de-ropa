@@ -8,9 +8,16 @@
 </head>
 <body id="body">
     <header>
-        <h1 class="tittle">Tienda de ropa</h1>
         <div class="icon__menu">
-            <i id="btn_open"><img src="../../../img/iconos/menu.png" alt=""></i>
+        <i id="btn_open"><img src="../../../img/iconos/menu.png" alt=""></i>
+        </div>
+        <h1 class="tittle">Tienda de ropa</h1>
+        <div class="compras">
+            <div class="contador">
+                 <img src="../../../img/iconos/contador.png" alt="">
+                <samp class="contador__texto">0</samp>
+            </div>
+            <img src="../../../img/iconos/Compras.png" id="cartbutton" alt="">
         </div>
     </header>
     <div class="menu__side" id="menu_side">
@@ -34,6 +41,29 @@
                     <h4 class="menu__text">Mujer</h4>
                 </div>
             </a>
+        </div>
+    </div>
+    <div id="cartmenu" class="cart__menu__hidden">
+        <div class="cart__content">
+            <button id="cart__close">X</button>
+            <h2 class="cart__text">Carrito de compras</h2>
+        </div>
+        <ul id="cart__items">
+            <li class="cart__item">
+                <span class="cart__item__imagen"><img src="../../../img/img-hombre-superior/hoddie.png" alt=""></span>
+                <span class="cart__item__descripcion"><h2>Prenda</h2><p>Hoddie negro</p></span>
+                <span class="cart__item__talla"><h2>Talla</h2><p>S</p></span>
+                <span class="cart__item__cantidad"><h2>Cantidad</h2><P>1</P></span>
+                <span class="cart__item__precio"><h2>Precio</h2><p>$90.000</p></span>
+            </li>
+            
+        </ul>
+        <div class="cart__actions">
+            <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+            <button onclick="pagar()">Pagar</button>
+        </div>
+        <div class="cart__total">
+            Total: $180.000
         </div>
     </div>
     <div class="prendas__container">
@@ -80,7 +110,8 @@
         
     </div>
     <div class="grid-containers__prendas-texto">
-        <div class="prendas-texto-iconos"></div>
+        <div class="prendas-texto-iconos"> 
+        </div>
         <div class="prendas-texto-descripcion">
             <div class="descripcion__prenda">
             <h2>Buzo cuello tortuga</h2>

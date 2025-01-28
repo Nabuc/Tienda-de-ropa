@@ -80,3 +80,15 @@ document.querySelectorAll('.talla').forEach(button => {
                 alert('Por favor, selecciona una talla antes de añadir al carrito.');
             }
         });
+//Carrito de compras
+const cartmenu = document.getElementById('cartmenu')
+const cartbutton = document.getElementById('cartbutton')
+const cart__close = document.getElementById('cart__close')
+//mostrar carro
+cartbutton.addEventListener('click', ()=>{
+  cartmenu.classList.toggle('show');
+})
+//ocultar carro
+cart__close.addEventListener('click', ()=> {
+  cartmenu.classList.remove('show');
+})
